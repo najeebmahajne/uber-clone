@@ -1,14 +1,18 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import tw from 'twrnc';
+import Map from '../components/Map';
 
 const MapScreen = () => {
   return (
     <View>
-      <Text> This is a MapScreen</Text>
+      <View style={tw`h-1/2`}></View>
+      <Map />
+      <View style={tw`h-1/2`}></View>
     </View>
   )
-}
+};
 
-export default MapScreen
+export default MapScreen;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});

@@ -3,15 +3,17 @@ import { StyleSheet, Text, View } from 'react-native';
 import { Provider } from 'react-redux';
 import { store } from './store';
 import HomeScreen from './screens/HomeScreen';
-import MapScreen from './screens/HomeScreen';
+import MapScreen from './screens/MapScreen';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+//import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createStackNavigator } from '@react-navigation/stack';
+import 'react-native-gesture-handler';
 
 //set up redux - Done
 ///////
 export default function App() {
-  const Stack = createNativeStackNavigator();
+  const Stack = createStackNavigator();
   return (
     <Provider store={store}>
       <NavigationContainer>
@@ -29,6 +31,7 @@ export default function App() {
               component={MapScreen}
               options={{
                 headerShown: false,
+
               }}
             />
           </Stack.Navigator>
